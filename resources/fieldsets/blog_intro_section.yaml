@@ -1,0 +1,55 @@
+title: 'Blog Intro Section'
+fields:
+  -
+    handle: intro_heading
+    field:
+      input_type: text
+      antlers: false
+      display: 'Intro Heading'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: intro_image
+    field:
+      mode: grid
+      container: images
+      restrict: true
+      allow_uploads: true
+      max_files: 1
+      display: 'Intro Image'
+      type: assets
+      icon: assets
+      listable: hidden
+  -
+    handle: intro_inner_heading
+    field:
+      input_type: text
+      antlers: false
+      display: 'Intro Inner Heading'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: intro_inner_paragraph
+    field:
+      antlers: false
+      display: 'Intro Inner Paragraph'
+      type: textarea
+      icon: textarea
+      listable: hidden
+  -
+    import: block_button
+  -
+    handle: featured_article
+    field:
+      max_items: 1
+      mode: default
+      collections:
+        - blog
+      display: 'Featured Article'
+      type: entries
+      icon: entries
+      listable: hidden
+      validate:
+        - required

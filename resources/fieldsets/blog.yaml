@@ -1,0 +1,93 @@
+title: Blog
+fields:
+  -
+    handle: blog
+    field:
+      sets:
+        fancy_blockquote:
+          display: 'Fancy Blockquote'
+          fields:
+            -
+              handle: copy
+              field:
+                type: textarea
+                listable: hidden
+                display: Copy
+        unordered_list:
+          display: 'Unordered List'
+          fields:
+            -
+              handle: list
+              field:
+                type: list
+                listable: hidden
+                display: List
+        ordered_list:
+          display: 'Ordered List'
+          fields:
+            -
+              handle: list
+              field:
+                type: list
+                listable: hidden
+                display: List
+        blockquote:
+          display: Blockquote
+          fields:
+            -
+              handle: quote
+              field:
+                type: textarea
+                listable: hidden
+                display: Quote
+            -
+              handle: cite
+              field:
+                input_type: text
+                type: text
+                listable: hidden
+                display: Cite
+        image:
+          display: Image
+          fields:
+            -
+              handle: image
+              field:
+                mode: grid
+                container: images
+                restrict: true
+                allow_uploads: true
+                max_files: 1
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - h4
+        - h5
+        - h6
+        - underline
+        - table
+      container: assets
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: true
+      link_noreferrer: true
+      target_blank: true
+      reading_time: false
+      fullscreen: true
+      allow_source: false
+      type: bard
+      listable: hidden
+      display: Blog
+      always_show_set_button: true

@@ -1,0 +1,146 @@
+/*
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+| COMPONENTS: Site Footer 
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+/* ===== VARIABLES ===== */
+
+
+/* ===== LAYOUT ===== */
+
+.icon-arrow-up {
+  color: $primary;
+}
+
+.footer {
+  position: relative;
+  background-color: $contrast;
+  color: $white;
+  display: flex;
+  padding-bottom: 50px;
+
+  &__inner {
+    position: relative;
+    
+    .copyright {
+      margin-top: 4rem;
+      max-width: 290px;
+      width: 100%;
+      display: flex;
+      font-size: 14px;
+      color: #d6d6d6;
+      
+      @include above( md ) {
+        justify-content: center;
+        max-width: unset;
+      }
+    }
+  }
+  
+  .logo {
+    margin-right: 6rem;
+  }
+      
+  /* === NAVIGATION === */
+  &__nav {
+    max-width: $text_max;
+    display: flex;
+    align-items: center;
+  }
+
+  /* ===== RESPONSIVE ===== */
+
+  /* === BELOW MOBILE === */
+  @include below( sm ) {
+    &__nav {
+      flex-flow: column;
+      align-items: center;
+      margin: 0;
+    }
+
+    .copyright {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  /* === BELOW TABLET === */
+  @include below( md ) {
+    .copyright {
+      span {
+        display: block;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+/* ===== COMPONENTS ===== */
+
+/* === SCROLL TO TOP BUTTON === */
+
+// Scroll To Top Size
+$stt-size: 4rem;
+
+.scroll-to-top {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 117px;
+  height: 82px;
+  padding: 0.25em;
+  font-size: $stt-size;
+  background-color: $background;
+  fill: $link_color;
+  border-top: 2px solid $contrast;
+
+  svg {
+    width: 30px;
+    z-index: 2;
+    path {
+      transition: fill .35s ease-in-out;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: inherit;
+    top: 0;
+    left: calc(50% - 1px);
+    height: 100%;
+    width: 2px;
+    background-color: $contrast;
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: $link_hover;
+      }
+    }
+  }
+}
+
+/* === COPYRIGHT === */
+.copyright {
+  justify-self: center;
+  a {
+    font-size: inherit;
+    color: inherit;
+  }
+}
+
+.footer-spacer {
+  height: 1px;
+  min-width: 223px;
+  max-width: 223px;
+  margin-right: 96px;
+  content: '';
+}
+
+.nav-wrapper {
+  padding-bottom: 2px;
+}

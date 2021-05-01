@@ -1,0 +1,49 @@
+title: 'Stat Card'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: card_number
+        field:
+          input_type: text
+          antlers: false
+          display: 'Card Number'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: card_heading
+        field:
+          input_type: text
+          antlers: false
+          display: 'Card Heading'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: card_paragraph
+        field:
+          antlers: false
+          display: 'Card Paragraph'
+          type: textarea
+          icon: textarea
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required

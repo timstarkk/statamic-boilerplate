@@ -1,0 +1,39 @@
+<section id="banner" class="banner banner--short trim gutter">
+
+	<div class="banner__inner wrapper">
+
+		<div class="title-group">
+			<h3 class="banner-subtitle">{{ view:error_title }}</h3>
+			<h1>{{ view:error_code }}</h1>
+		</div>
+
+		{{ if view:error_message }}
+			<hr>
+			<p>{{ view:error_message }}</p>
+		{{ /if }}
+		
+		<!-- <a class="btn mar-t four-o-four" href="/">
+			<p>Back to Homepage</p>
+		</a> -->
+
+		<a href="/" class="btn articles-btn  mar-t mt-10">
+
+			<svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M23 8L0.499999 15.7942L0.5 0.20577L23 8Z" fill="#11213E"/>
+			</svg>
+
+		  <span class="btn__text">Back to Homepage</span>
+
+		</a>
+		
+		<a href="{{ url }}" class="article-card bg-contrast pt-8 pb-16 display-show">
+  
+		  <h5 class="">{{ title }}</h5>
+  
+		  <p class="mt-4"> {{ post_description }}</p>
+  
+		</a>
+			
+	</div> <!-- END banner__inner -->
+	
+</section> <!-- END banner -->

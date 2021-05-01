@@ -1,0 +1,49 @@
+.VueCarousel-pagination {
+    .VueCarousel-dot {
+        background-color: $text_color !important;
+    };
+    
+    .VueCarousel-dot--active {
+        background-color: $primary !important;
+    };
+};
+
+
+.VueCarousel-navigation {
+    .VueCarousel-navigation-button {
+        color: $primary !important;
+    };
+
+    .VueCarousel-navigation-prev {
+        display: none;
+    }
+
+    .VueCarousel-navigation-next[data-v-453ad8cd] {
+        height: 46px;
+        width: 46px;
+        position: absolute;
+        right: 46px;
+        top: 194px;
+        background-color: $contrast;
+    }
+};
+
+.rotator-slide {
+    background-color: $text_color_off;
+    height: 217px;
+
+    .rotator-left {
+        background-color: $primary;
+        min-width: 222px;
+    };
+
+    .rotator-right {
+        padding: 28px;
+
+        .rotator-comments {
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 30px;
+        }
+    };
+};

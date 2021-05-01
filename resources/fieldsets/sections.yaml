@@ -1,0 +1,69 @@
+title: Sections
+fields:
+  -
+    handle: section_settings
+    field:
+      type: section
+      listable: false
+      display: 'Page Sections'
+  -
+    handle: sections
+    field:
+      sets:
+        section_full:
+          display: 'Full Section'
+          fields:
+            -
+              import: sections_meta
+            -
+              import: section_full
+        contact_cta:
+          display: 'Contact CTA'
+          fields:
+            -
+              handle: heading
+              field:
+                input_type: text
+                antlers: false
+                display: Heading
+                type: text
+                icon: text
+                listable: hidden
+        over_image_left:
+          display: 'Over Image Left'
+          fields:
+            -
+              handle: heading
+              field:
+                input_type: text
+                antlers: false
+                display: Heading
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: copy
+              field:
+                antlers: false
+                display: Copy
+                type: textarea
+                icon: textarea
+                listable: hidden
+            -
+              import: block_button
+            -
+              handle: image
+              field:
+                mode: grid
+                container: images
+                restrict: true
+                allow_uploads: true
+                max_files: 1
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+      type: replicator
+      listable: hidden
+      display: Sections
+      collapse: false

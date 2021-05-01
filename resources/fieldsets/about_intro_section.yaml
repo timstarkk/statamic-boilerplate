@@ -1,0 +1,47 @@
+title: 'About Intro Section'
+fields:
+  -
+    handle: intro_section_heading
+    field:
+      input_type: text
+      antlers: false
+      display: 'Intro Section Heading'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: intro_section_subheading
+    field:
+      antlers: false
+      display: 'Intro Section Subheading'
+      type: textarea
+      icon: textarea
+      listable: hidden
+  -
+    handle: intro_section_image
+    field:
+      mode: grid
+      container: images
+      restrict: true
+      allow_uploads: true
+      max_files: 1
+      display: 'Intro Section Image'
+      type: assets
+      icon: assets
+      listable: hidden
+  -
+    handle: intro_text_column_one
+    field:
+      antlers: false
+      display: 'Intro Text Column One'
+      type: textarea
+      icon: textarea
+      listable: hidden
+  -
+    handle: intro_text_column_two
+    field:
+      antlers: false
+      display: 'Intro Text Column Two'
+      type: textarea
+      icon: textarea
+      listable: hidden

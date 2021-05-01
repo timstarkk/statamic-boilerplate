@@ -3475,16 +3475,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.0.42",
+            "version": "v3.0.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "7bed027fa24a8304ede13f28c623294145925e22"
+                "reference": "d376d61914ae6cf980e4e9c8f4d420dfed4b3bb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/7bed027fa24a8304ede13f28c623294145925e22",
-                "reference": "7bed027fa24a8304ede13f28c623294145925e22",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/d376d61914ae6cf980e4e9c8f4d420dfed4b3bb8",
+                "reference": "d376d61914ae6cf980e4e9c8f4d420dfed4b3bb8",
                 "shasum": ""
             },
             "require": {
@@ -3551,7 +3551,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v3.0.42"
+                "source": "https://github.com/statamic/cms/tree/v3.0.41"
             },
             "funding": [
                 {
@@ -3559,7 +3559,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-02-04T21:41:05+00:00"
+            "time": "2021-02-03T16:04:05+00:00"
         },
         {
             "name": "statamic/stringy",
@@ -6796,16 +6796,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.5.11",
+            "version": "2.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "e91d67353054bf827c64687fcac5ea44e4dcec54"
+                "reference": "98154e8b991fb616304c213cd405299ffedc26f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/e91d67353054bf827c64687fcac5ea44e4dcec54",
-                "reference": "e91d67353054bf827c64687fcac5ea44e4dcec54",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/98154e8b991fb616304c213cd405299ffedc26f5",
+                "reference": "98154e8b991fb616304c213cd405299ffedc26f5",
                 "shasum": ""
             },
             "require": {
@@ -6869,7 +6869,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
-            "time": "2021-02-05T12:52:11+00:00"
+            "time": "2021-02-02T10:15:48+00:00"
         },
         {
             "name": "filp/whoops",

@@ -1,0 +1,171 @@
+<!-- START banner -->
+  <section id="banner" class="banner has-image trim gutter">
+
+      <!-- IF featured image, use featured image as post banner -->
+      {{ if featured_image }} 
+
+        {{ get_content from="/blog" }}
+          <div class="banner__image banner-{{ banner_overlay }}"style="background-image: url('{{ featured_image }}');"></div>
+        {{ /get_content }}
+
+        <!-- START banner__inner -->
+        <div class="banner__inner wrapper">
+            <div class="hgroup">
+                <h3 class="large mb-12 flex">
+                
+                {{ if published_date }}
+                {{ published_date format="F j, Y" }}
+                {{ /if }}
+                  
+                {{ if author }}
+                {{ relate:author }}
+                by <div class="author-name font-semibold"> {{ name }}</div>
+                {{ /relate:author}}
+                {{ /if }}
+
+                </h3>
+                <h1 class="blog-post-title">{{ title }}</h1>
+            </div>
+        </div>
+        <!-- END banner__inner -->
+
+      <!-- ELSE, use blog index banner as post banner -->
+      {{ else }}
+        {{ get_content from="/blog" }}
+
+        {{ if banner_image }}
+        <div class="banner__image banner-{{ banner_overlay }}"style="background-image: url('{{ banner_image }}');"></div>
+        {{ /if }}
+
+        {{ /get_content }}
+        <!-- START banner__inner -->
+        <div class="banner__inner wrapper">
+            <div class="hgroup">
+                <h3 class="large mb-12">
+                
+                {{ if published_date }}
+                {{ published_date format="F j, Y" }}
+                {{ /if }}
+                  
+                {{ if author }}
+                {{ relate:author }}
+                by {{ name }}
+                {{ /relate:author}}
+                {{ /if }}
+                
+                </h3>
+                <h1>{{ title }}</h1>
+            </div>
+        </div>
+        <!-- END banner__inner -->
+      {{ /if }}
+  </section>
+<!-- END banner -->
+
+<section class="trim gutter flex flex-col md:flex-row bg-white justify-center">
+
+  <!-- START side bar -->
+    <div class="flex md:flex-col justify-between md:justify-start side-bar">
+      
+        {{ if published_date }}
+        <div class="">
+          <p class="heading-color-alt font-semibold text-sm">Posted</p>
+          <p class="text-black mb-8 font-pt-serif">{{ published_date format="F j, Y" }}</p>
+        </div>
+        {{ /if }}
+  
+          
+        {{ if author }}
+        {{ relate:author }}
+        <div class="">
+          <p class="heading-color-alt font-semibold text-sm">Written by</p>
+          <p class="text-black mb-8 font-pt-serif">{{ name }}</p>
+        </div>
+        {{ /relate:author}}
+        {{ /if }}
+  
+          
+        <div class="">
+          <p class="heading-color-alt font-semibold text-sm">Category</p>
+          <p class="text-black mb-8 font-pt-serif">{{ category }}</p>
+        </div>
+
+    </div>
+  <!-- END side bar -->
+
+  <!-- START blog area -->
+    <div>
+        
+      <article class="bard transciption">
+        {{ blog }}
+      
+          {{ partial src="sets/_{type}" }}
+        
+        {{ /blog }}
+      </article>
+      
+    </div>
+  <!-- START blog area -->
+
+</section>
+
+<!-- START articles_section -->
+<section class="trim gutter">
+
+  {{ get_content from="/"}}
+  <section class="flex flex-col lg:flex-row mt-16">
+
+    <div class="article-left w-full lg:w-1/5 flex lg:justify-end">
+
+      <p class="heading-color-alt font-semibold">{{ article_section_heading }}</p>
+
+    </div>
+
+    <div class="article-right lg:w-4/5 xl:w-4/5">
+
+      <div class="flex flex-1 flex-wrap justify-between article-card-container">
+	
+        {{ collection:blog featured_article:is="true"}}
+    
+          <a href="{{ url }}" class="article-card bg-contrast pt-8 pb-16 display-show">
+    
+            <h5 class="">{{ title }}</h5>
+    
+            <p class="mt-4"> {{ post_description }}</p>
+    
+          </a>
+    
+        {{ /collection:blog}}	
+
+      </div>
+
+
+
+      <!-- 
+
+
+        ||||||||
+        ||||||||
+        |||||||| NOTE, the link below is hard coded
+        ||||||||
+        ||||||||
+
+
+       -->
+      <a href="/blog" class="btn articles-btn mt-10">
+					
+        <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23 8L0.499999 15.7942L0.5 0.20577L23 8Z" fill="#11213E"/>
+        </svg>
+
+        <span class="btn__text">{{ articles_text }}</span>
+
+      </a>
+      
+    </div>	
+
+  </section>
+  {{ /get_content }}
+
+</section>
+<!-- END articles_section -->

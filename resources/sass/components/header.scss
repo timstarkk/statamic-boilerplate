@@ -1,0 +1,88 @@
+/*
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+| COMPONENTS: Site Header 
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+
+/* ===== LAYOUT ===== */
+
+.header {
+  background-color: transparent;
+  width: 100vw;
+  padding: 30px 30px 0;
+  color: $text_color;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  // The logo height is how the header's whole size is determined, width will be automatically set.
+  &__logo {
+    position: relative;
+    z-index: 3;
+    color: $white;
+  }
+
+  &__nav {
+    position: relative;
+    z-index: 1;
+    // display: flex;
+    display: none;
+  
+    .link {
+      color: inherit;
+      transition: color 300ms ease-in-out;
+  
+      &:hover,
+      &:active {
+        color: $link_hover;
+      }
+    }
+  }
+
+  .menu-button {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: flex-end;
+    height: 45px;
+  }
+
+  @include below( lg ) {
+    &__nav {
+      // display: none;
+    }
+  }
+
+  @include above( lg ) {
+    .menu-button {
+      // display: none;
+    }
+  }
+}
+
+/* ===== COMPONENTS ===== */
+.logo {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: auto;
+  max-width: 154px;
+
+  svg {
+    width: 100%;
+    height: inherit;
+    max-height: 58px;
+  }
+
+
+  @include above( sm ) {
+    max-width: 223px;
+    svg {
+      max-height: 84px;
+    }
+  }
+}

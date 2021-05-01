@@ -1,0 +1,68 @@
+title: 'Case Study'
+fields:
+  -
+    handle: case_study_image
+    field:
+      mode: grid
+      container: images
+      restrict: true
+      allow_uploads: true
+      max_files: 1
+      display: 'Case Study Image'
+      type: assets
+      icon: assets
+      listable: hidden
+  -
+    handle: image_overlay_logo
+    field:
+      mode: grid
+      container: images
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      display: 'Image Overlay Logo'
+      type: assets
+      icon: assets
+      listable: hidden
+  -
+    handle: image_subheading
+    field:
+      input_type: text
+      antlers: false
+      display: 'Image Subheading'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: case_study_card_label
+    field:
+      input_type: text
+      antlers: false
+      display: 'Case Study Card Label'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: case_study_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Case Study Title'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: case_study_description
+    field:
+      antlers: false
+      display: 'Case Study Description'
+      type: textarea
+      icon: textarea
+      listable: hidden
+  -
+    handle: see_more_link
+    field:
+      display: '"See More" Link'
+      type: link
+      icon: link
+      listable: hidden

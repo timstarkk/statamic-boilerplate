@@ -1,0 +1,42 @@
+title: 'White Papers'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: link
+        field:
+          input_type: url
+          display: URL
+          type: text
+          listable: hidden
+      -
+        handle: featured_image
+        field:
+          type: assets
+          container: images
+          restrict: true
+          max_files: 1
+          width: 33
+          display: 'Featured Image'
+          listable: hidden
+          mode: grid
+          allow_uploads: true
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required

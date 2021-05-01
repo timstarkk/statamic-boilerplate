@@ -1,0 +1,53 @@
+title: About
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        import: banner
+      -
+        handle: banner_subheading
+        field:
+          input_type: text
+          antlers: false
+          display: 'Banner Subheading'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        import: about_intro_section
+      -
+        import: about_summary_section
+      -
+        import: services
+      -
+        import: case_study
+      -
+        import: articles_section
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true

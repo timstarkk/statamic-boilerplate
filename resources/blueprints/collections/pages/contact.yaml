@@ -1,0 +1,81 @@
+title: Contact
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        import: banner
+      -
+        handle: banner_subheading
+        field:
+          input_type: text
+          antlers: false
+          display: 'Banner Subheading'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: page_heading
+        field:
+          input_type: text
+          antlers: false
+          display: 'Page Heading'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: contact_info
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'Contact Info'
+          type: markdown
+          icon: markdown
+          listable: hidden
+      -
+        handle: paragraph
+        field:
+          antlers: false
+          display: paragraph
+          type: textarea
+          icon: textarea
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: template
+        field:
+          hide_partials: true
+          display: Template
+          type: template
+          icon: template
+          listable: hidden

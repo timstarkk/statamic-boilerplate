@@ -1,0 +1,92 @@
+/*
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+| BASE: Body
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+html {
+  // @include fluid-type(font-size, $min_width, $max_width, $font_min, $font_max);
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $background;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: $copy_font;
+  text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  color: $text_color;
+
+  // Firefox only
+  scroll-behavior: smooth;
+
+  // remove scollbar
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.scrollable {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scroll-lock {
+  overflow: hidden !important;
+}
+
+#site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#header {
+  position: absolute;
+  z-index: 3;
+}
+
+#main {
+  position: relative;
+  z-index: 2;
+  flex: 1 0 auto;
+}
+
+#footer {
+  position: relative;
+  z-index: 1;
+}
+
+.site-fade-in {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  background: rebeccapurple;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: 99999999999;
+  transition: opacity 1600ms cubic-bezier(.29,.4,.15,.91) 100ms;
+  pointer-events: none;
+}
+
+.site-fade-in.loading-site {
+  opacity: 1;
+}

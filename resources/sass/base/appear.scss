@@ -1,0 +1,79 @@
+/*
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+| BASE: Appear Animations
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+[appear] {
+    opacity: 0;
+    transition: transform, opacity;
+    transition-duration: 1600ms;
+    // strong ease
+    transition-timing-function: cubic-bezier(.29,.4,.15,.91);
+    // strong ease-out
+    // transition-timing-function: cubic-bezier(.16,.71,.11,.95);
+  
+  
+    &[data-state="active"] {
+      opacity: 1;
+    }
+  }
+  
+  /* ==== FADE ==== */
+  
+  /* Fade In */
+  [appear="fade-in"] {
+    transform: none;
+  
+    &[data-state="active"] {
+      transform: none;
+    }
+  }
+  
+  /* Fade Right */
+  [appear="fade-right"] {
+    transform: translateX(-24px);
+  
+    &[data-state="active"] {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Fade Left */
+  [appear="fade-left"] {
+    transform: translateX(24px);
+  
+    &[data-state="active"] {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Fade Up */
+  [appear="fade-up"] {
+    transform: translateY(24px);
+  
+    &[data-state="active"] {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fade Down */
+  [appear="fade-down"] {
+    transform: translateY(-24px);
+  
+    &[data-state="active"] {
+      transform: translateY(0);
+    }
+  }
+  
+  
+  /* ===== SCALE ===== */
+  
+  /* Scale In */
+  [appear="scale-in"] {
+    transform: scale(0.8);
+  
+    &[data-state="active"] {
+      transform: scale(1);
+    }
+  }

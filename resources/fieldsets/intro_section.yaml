@@ -1,0 +1,35 @@
+title: 'Intro Section'
+fields:
+  -
+    handle: intro_heading
+    field:
+      input_type: text
+      antlers: false
+      display: 'Intro Section Heading'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: intro_paragraph
+    field:
+      antlers: false
+      display: 'Intro Section Paragraph'
+      type: textarea
+      icon: textarea
+      listable: hidden
+  -
+    handle: intro_section_link_text
+    field:
+      input_type: text
+      antlers: false
+      display: 'Intro Section Link Text'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: intro_link
+    field:
+      display: 'Intro Section Link Url'
+      type: link
+      icon: link
+      listable: hidden

@@ -1,7 +1,15 @@
 title: Pages
+revisions: false
+route: '{parent_uri}/{slug}'
+sort_dir: asc
 structure:
   root: true
   tree:
     -
       entry: home
-route: '{parent_uri}/{slug}'
+    -
+      entry: 4191777c-a834-44c8-aeb8-6aa106e244c8
+    -
+      entry: b8767a49-4e26-42a9-952e-37327dcafaa1
+    -
+      entry: b3effbae-7acd-45ee-bc1d-c1136450bc51

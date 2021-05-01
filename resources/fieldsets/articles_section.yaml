@@ -1,0 +1,14 @@
+title: 'Articles Section'
+fields:
+  -
+    handle: article_section_heading
+    field:
+      input_type: text
+      antlers: false
+      display: 'Article Section Heading'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    import: block_button
+    prefix: articles_

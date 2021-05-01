@@ -1,0 +1,20 @@
+<div class="trim pb-0"><!--this is the buffer for the overflow-image--></div>
+<section class="trim gutter bg-contrast">
+  <div class="wrapper flex flex-col-reverse md:flex-row">
+
+    <div class="md:w-1/2 frame mb-0 md:mt-0">
+      <h3>{{ heading }}</h3>
+      <p class="mt-4">{{ copy }}</p>
+      <a href="{{ link }}" class="btn mt-10">
+        <span class="btn__text meta-fix">{{ text }}</span>
+      </a>
+    </div> 
+
+    <div class="md:w-1/2 md:gutter pr-0">
+      <div class="accent-lines-image-frame-simple">
+        <img class="overflow-image-left" src="{{ image }}" alt="image">
+      </div>
+    </div>
+
+  </div>
+</section>

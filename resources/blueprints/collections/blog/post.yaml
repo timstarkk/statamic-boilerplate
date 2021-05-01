@@ -1,0 +1,98 @@
+title: Post
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          display: Title
+          localizable: true
+          validate:
+            - required
+      -
+        handle: post_description
+        field:
+          type: textarea
+          display: Description
+          instructions: 'Write small description of your post or grab a small snippet from the post itself that you want to feature.'
+          width: 66
+          listable: hidden
+          antlers: false
+      -
+        handle: featured_image
+        field:
+          type: assets
+          container: images
+          restrict: true
+          max_files: 1
+          width: 33
+          display: 'Featured Image'
+          listable: hidden
+          mode: grid
+          allow_uploads: true
+          instructions: 'Recommended image size at least 1640x865'
+      -
+        import: blog
+      -
+        handle: featured_article
+        field:
+          display: 'Featured Article'
+          type: toggle
+          icon: toggle
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: published_date
+        field:
+          mode: single
+          time_enabled: false
+          time_required: false
+          earliest_date: '1900-01-01'
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: Date
+          type: date
+          icon: date
+          listable: hidden
+      -
+        handle: author
+        field:
+          type: users
+          max_items: 1
+          label: '{{ name }}'
+          mode: panes
+          display: Author
+          default: current
+          width: 66
+      -
+        handle: category
+        field:
+          options:
+            'Mergers & Acquisitions': null
+            'Partner Group Laterals': null
+            'Office Openings': null
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: Category
+          type: select
+          icon: select
+          listable: hidden
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required

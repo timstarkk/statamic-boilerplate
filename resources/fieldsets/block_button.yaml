@@ -1,0 +1,18 @@
+title: 'Block Button'
+fields:
+  -
+    handle: text
+    field:
+      type: text
+      display: 'Button Text'
+      listable: false
+      placeholder: Text
+      input_type: text
+      antlers: false
+  -
+    handle: link
+    field:
+      display: Link
+      type: link
+      icon: link
+      listable: hidden

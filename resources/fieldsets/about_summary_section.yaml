@@ -1,0 +1,52 @@
+title: 'About Summary Section'
+fields:
+  -
+    handle: summary_image
+    field:
+      mode: grid
+      container: images
+      restrict: true
+      allow_uploads: true
+      max_files: 1
+      display: 'Summary Image'
+      type: assets
+      icon: assets
+      listable: hidden
+  -
+    handle: summary_heading
+    field:
+      input_type: text
+      antlers: false
+      display: 'Summary Heading'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: summary_paragraph
+    field:
+      restrict: false
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      smartypants: false
+      antlers: false
+      display: 'Summary Paragraph'
+      type: markdown
+      icon: markdown
+      listable: hidden
+  -
+    handle: cta_button_text
+    field:
+      input_type: text
+      antlers: false
+      display: 'CTA button text'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: cta_link
+    field:
+      display: 'CTA Button Link'
+      type: link
+      icon: link
+      listable: hidden

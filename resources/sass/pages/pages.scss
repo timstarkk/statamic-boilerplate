@@ -1,0 +1,322 @@
+// shared styling across all pages
+//
+//
+//
+
+
+
+// START articles_section \\
+.article-left {
+    padding-bottom: 32px;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include above ( md ) {
+        padding-right: 40px;
+        // padding-left: 40px;
+    }
+
+    @include above( lg ) {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 14px;
+    }
+
+    @include above( 1110px ) {
+        padding-right: 32px;
+    }
+}
+
+.article-right {
+    padding: 32px 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+
+    .intro-text-wrapper {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    #intro-section-image {
+        min-height: 324px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    @include above( sm ) {
+        // padding-left: 32px;
+        // padding-right: 32px;
+
+        .intro-text-wrapper {
+            padding: 0;
+        }
+    }
+
+    @include above( md ) {
+        // padding-left: 40px;
+        // padding-right: 40px;
+    }
+
+    @include above( lg ) {
+        padding-top: 12px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+.article-card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include above( md ) {
+        flex-wrap: nowrap;
+    }
+
+}
+
+.article-card {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-left: 59px;
+    padding-right: 6%;
+    margin-bottom: 32px;
+
+    p {
+        line-height: 140%;
+    }
+
+    &.display-four:nth-child(n+5) {
+        display: none;
+    }
+
+    &.display-show:nth-child(n+7) {
+        display: none;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 28px;
+        left: 28px;
+        width: 2px;
+        height: calc(100% - 28px);
+        background-color: $background;
+        transition: all .3s ease-in-out;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 28px;
+        left: 28px;
+        width: calc(100% - 28px);
+        height: 15px;
+        border-top: 2px solid $background;
+        border-bottom: 2px solid $background;
+        transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+        cursor: pointer;
+        
+        &:before {
+            width: 1px;
+            background-color: $primary;
+            height: calc(100% - 48px);
+        }
+
+        &:after {
+            // width: calc(100% - 108px);
+            border-top: 1px solid $primary;
+            border-bottom: 1px solid $primary;
+            width: calc(100% - 48px);
+        }
+
+    }
+
+    &:nth-child(even) {
+        // margin-bottom: 0;
+    }
+
+    &:nth-child(n+3) {
+        // display: none;
+    }
+
+    &.display-more {
+        display: block;
+    }
+
+    &.display-more:nth-child(n+7) {
+        display: none;
+    }
+
+    &.display-more:nth-child(even) {
+        margin-bottom: 32px;
+    }
+
+    @include above( 580px ) {
+        padding-left: 8%;
+    }
+
+    @include above( 650px ) {
+        // height: 311px;
+        width: calc(50% - 9px);
+        padding-left: 10%;
+
+        &:nth-child(odd) {
+            margin-right: 18px;
+        }
+        
+        &:nth-child(even) {
+            margin-bottom: 32px;
+        }
+    }
+    
+    @include above( md ) {
+        &:nth-child(n+3) {
+            display: block;
+        }
+
+        &.display-more:nth-child(n+7) {
+            display: block;
+        }
+
+        &.display-show:nth-child(n+5) {
+            display: none;
+        }
+    
+    }
+    
+    @include above( lg ) {
+        padding-left: 6%;
+    }
+}
+// END articles_section \\
+
+
+.vertical-line {
+    border-left: 1px solid $primary;
+    height: 78px;
+}
+
+.horizontal-line {
+    border-bottom: 1px solid $primary;
+    width: 78px;
+}
+
+
+// START margin \\
+
+.mb-44 {
+    margin-bottom: 44px;
+}
+
+.mb-53 {
+    margin-bottom: 53px;
+}
+
+.mr-112 {
+    margin-right: 112px !important;
+}
+
+// END margin \\
+
+// START padding \\
+.pl-113 {
+    padding-left: 113px;
+}
+
+.px-9 {
+    padding-left: 2.25rem !important;
+    padding-right: 2.25rem !important;
+}
+
+.py-9 {
+    padding-top: 2.25rem !important;
+    padding-bottom: 2.25rem !important;
+}
+
+.p-28 {
+    padding: 28px !important;
+}
+
+.pl-28 {
+    padding-left: 28px !important;
+}
+
+.pl-56 {
+    padding-left: 56px !important;
+}
+
+.pl-59 {
+    padding-left: 59px !important;
+}
+
+.py-14 {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+}
+
+.px-14 {
+    padding-left: 3.5rem !important;
+    padding-right: 3.5rem !important;
+}
+
+.pt-46 {
+    padding-top: 46px !important;
+}
+
+.pt-199 {
+    padding-top: 199px !important;
+}
+
+// END padding \\
+
+// START width \\
+.w-227 {
+    width: 227px;
+}
+// END width \\
+
+
+.patterns {
+    height: 100%;
+    width: 100%;
+    background-color: #152747;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+.animated-link {
+    width: 280px;
+    height: 30px;
+    transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
+
+    p {
+        transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
+    }
+
+    svg {
+        transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
+        path {
+            transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
+        }
+    }
+
+    &:hover {
+        p {
+            color: $link_hover;
+        }
+    
+        svg {
+            margin-left: 6px;
+            path {
+                stroke: $link_hover;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+<footer id="footer">
+
+	<div class="outer relative" style="z-index: 1;">
+		<a class="scroll-to-top icon-arrow-up" href="#site">
+			{{ theme:output src="svg/scroll-to-top.svg" }}
+		</a> <!-- END scroll-to-top -->
+	</div>
+
+	<div class="footer gutter trim">
+		<div class="footer__inner wrapper">
+
+			<nav class="nav footer__nav flex flex-col md:flex-row items-start md:items-center">
+				
+				<a id="logo" class="header__logo logo" href="/" title="{{ site:name }} | Home">
+					{{ theme:output src="svg/logo.svg" }}
+				</a> 
+				
+				<div class="nav-wrapper mt-16 md:mt-0 flex items-center">
+					{{ nav:header }}
+	
+						<a class="nav__link link" href="{{ url }}">
+							<span class="font-bold">{{ title }}</span>
+						</a>
+						
+					{{ /nav:header }}
+				</div>
+
+			</nav> <!-- END footer-nav -->
+
+			<div class="break"></div>
+			
+			<div class="flex flex-col md:flex-row">
+				<div class="footer-spacer"></div>
+				<div class="copyright small flex flex-wrap justify-start">
+					<span class="meta-fix">Copyright &copy; {{ date format="Y" }} {{ site:name }}.&nbsp;</span>
+					<span class="meta-fix">All rights reserved.&nbsp;</span>
+					<span class="meta-fix">
+						<a 
+							href="https://github.com/cyborgspaceviking" 
+							target="_blank" 
+							title="All my work in one place">
+							Site by State.
+						</a>
+					</span>
+				</div> <!-- END copyright -->
+			</div>
+	
+		</div> <!-- END inner-footer -->
+	</div>
+    
+</footer> <!-- END #footer -->

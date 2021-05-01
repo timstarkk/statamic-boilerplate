@@ -1,0 +1,9 @@
+title: Site
+data:
+  name: 'Compass Law'
+  favicon: favicons/favicon.ico
+  phone: 555-555-5555
+  email: info@website.com
+  address:
+    city: City
+    state: ST

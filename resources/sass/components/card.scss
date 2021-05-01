@@ -1,0 +1,22 @@
+/*
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+| COMPONENTS: Excerpt
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+.card {
+  $self: &;
+  display: flex;
+  box-shadow: $shadow;
+  border-radius: $round;
+  background: $contrast;
+
+  &__content {
+    width: 100%;
+    padding: $space;
+  }
+
+  &__figure {
+    width: 100%;
+  }
+}

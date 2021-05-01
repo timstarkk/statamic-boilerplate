@@ -1,0 +1,228 @@
+/*
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+| COMPONENTS: Section
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+
+/* ===== CONTAINERS ===== */
+
+/* === outer === */
+$outer_half: ($outer / 2);
+
+.outer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: $outer;
+
+  &--half {
+    max-width: $outer_half;
+  }
+}
+
+/* === wrapper === */
+$wrapper_half: $wrapper / 2;
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: $wrapper;
+
+  &--half {
+    max-width: $wrapper_half;
+  }
+}
+
+/* === inner === */
+$inner_half: ($inner / 2);
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: $inner;
+
+  &--half {
+    max-width: $inner_half;
+  }
+}
+
+
+
+/* ===== WHITESPACE ===== */
+
+/* === frame === */
+// margin based vertical whitespace
+.frame {
+  margin-top: $vert_space_min;
+  margin-bottom: $vert_space_min;
+
+  @include above( sm ) {
+    margin-top: $vert_space_mid;
+    margin-bottom: $vert_space_mid;
+  }
+
+  @include above( md ) {
+    margin-top: $vert_space_max;
+    margin-bottom: $vert_space_max;
+  }
+}
+
+@include above( sm ) {
+  .sm\:frame {
+    margin-top: $vert_space_mid;
+    margin-bottom: $vert_space_mid;
+
+    @include above( md ) {
+      margin-top: $vert_space_max;
+      margin-bottom: $vert_space_max;
+    }
+  }
+}
+
+@include above( md ) {
+  .md\:frame {
+    margin-top: $vert_space_max;
+    margin-bottom: $vert_space_max;
+  }
+}
+
+@include above( lg ) {
+  .lg\:frame {
+    margin-top: $vert_space_max;
+    margin-bottom: $vert_space_max;
+  }
+}
+
+/* === trim === */
+// padding based vertical whitespace
+.trim {
+  padding-top: $vert_space_min;
+  padding-bottom: $vert_space_min;
+
+  @include above( sm ) {
+    padding-top: $vert_space_mid;
+    padding-bottom: $vert_space_mid;
+  }
+
+  @include above( md ) {
+    padding-top: $vert_space_max;
+    padding-bottom: $vert_space_max;
+  }
+}
+
+@include above( sm ) {
+  .sm\:trim {
+    padding-top: $vert_space_mid;
+    padding-bottom: $vert_space_mid;
+
+    @include above( md ) {
+      padding-top: $vert_space_max;
+      padding-bottom: $vert_space_max;
+    }
+  }
+}
+
+@include above( md ) {
+  .md\:trim {
+    padding-top: $vert_space_max;
+    padding-bottom: $vert_space_max;
+  }
+}
+
+@include above( lg ) {
+  .lg\:trim {
+    padding-top: $vert_space_max;
+    padding-bottom: $vert_space_max;
+  }
+}
+
+
+/* === buffer === */
+// margin based horizontal whitespace
+.buffer {
+  margin-right: $horz_space_min;
+  margin-left: $horz_space_min;
+
+  @include above( sm ) {
+    margin-right: $horz_space_mid;
+    margin-left: $horz_space_mid;
+  }
+
+  @include above( md ) {
+    margin-right: $horz_space_max;
+    margin-left: $horz_space_max;
+  }
+}
+
+@include above( sm ) {
+  .sm\:buffer {
+    margin-right: $horz_space_mid;
+    margin-left: $horz_space_mid;
+
+    @include above( md ) {
+      margin-right: $horz_space_max;
+      margin-left: $horz_space_max;
+    }
+  }
+}
+
+@include above( md ) {
+  .md\:buffer {
+    margin-right: $horz_space_max;
+    margin-left: $horz_space_max;
+  }
+}
+
+@include above( lg ) {
+  .lg\:buffer {
+    margin-right: $horz_space_max;
+    margin-left: $horz_space_max;
+  }
+}
+
+
+/* === gutter === */
+// padding based horizontal whitespace
+.gutter {
+  padding-right: $horz_space_min;
+  padding-left: $horz_space_min;
+
+  @include above( sm ) {
+    padding-right: $horz_space_mid;
+    padding-left: $horz_space_mid;
+  }
+
+  @include above( lg ) {
+    padding-right: $horz_space_max;
+    padding-left: $horz_space_max;
+  }
+}
+
+@include above( sm ) {
+  .sm\:gutter {
+    padding-right: $horz_space_mid;
+    padding-left: $horz_space_mid;
+
+    @include above( md ) {
+      padding-right: $horz_space_max;
+      padding-left: $horz_space_max;
+    }
+  }
+}
+
+@include above( md ) {
+  .md\:gutter {
+    padding-right: $horz_space_max;
+    padding-left: $horz_space_max;
+  }
+}
+
+@include above( lg ) {
+  .lg\:gutter {
+    padding-right: $horz_space_max;
+    padding-left: $horz_space_max;
+  }
+}

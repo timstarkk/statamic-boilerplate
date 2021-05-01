@@ -1,0 +1,17 @@
+/*
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+| COMPONENTS: Overflow Image
+|––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+.overflow-image-left {
+  margin-top: -160px;
+
+  @include above( sm ) {
+    margin-top: -160px;
+  }
+
+  @include above( md ) {
+    margin-top: -200px;
+  }
+}

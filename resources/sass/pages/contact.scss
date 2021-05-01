@@ -1,0 +1,68 @@
+.contact-heading {
+    font-size: 48px;
+    color: $white;
+    max-width: 430px;
+
+    @include above( md ) {
+        max-width: 538px;
+    }
+
+    @include above( 900px ) {
+        font-size: 64px;
+    }
+}
+
+.contact-left {
+    padding-top: 10px;
+
+    @include above( md ) {
+        min-width: 50%;
+        max-width: 50%;
+    }
+
+    @include above( lg ) {
+        min-width: unset;
+        max-width: unset;
+    }
+}
+
+.contact-right {
+    color: $white;
+
+    p {
+        font-size: 22px;
+        line-height: 150%;
+
+        &:first-child {
+            margin-bottom: 36px;
+        }
+
+        &:last-child {
+            margin-top: 73px;
+            font-size: 16px;
+            color: #d6d6d6;
+        }
+
+        @include above( 900px ) {
+            font-size: 24px;
+
+            &:last-child {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @include above( md ) {
+        min-width: 50%;
+        max-width: 50%;
+    }
+
+    @include above( lg ) {
+        min-width: unset;
+        max-width: unset;
+    }
+}
+
+.contact-section {
+    padding-top: 202px;
+}

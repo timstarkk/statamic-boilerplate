@@ -1,0 +1,262 @@
+{{ partial src="banners/_banner" }}
+
+<section class="trim gutter home-intro-wrapper">
+
+	<div class="wrapper">
+
+		<!-- START intro_section -->
+		<section class="flex flex-col lg:flex-row home-intro-section">
+
+			<div class="py-8 lg:py-8 lg:pr-8 xl:pl-0 pt-0 lg:pt-0 lg:w-1/5.flex.justify-end">
+	
+				<p class="heading-color-alt font-semibold">{{ intro_heading }}</p>
+	
+			</div>
+	
+			<div class="py-8 xl:p-8 lg:w-4/5 lg:pt-0 xl:pt-0 xl:pr-0">
+	
+				<p class="intro-paragraph text-2xl"> {{ intro_paragraph }} </p>
+	
+				<div class="flex flex-1 justify-between stat-card-container">
+	
+					{{ collection:stat_cards }}
+						
+						<div class="stat-card bg-contrast pt-8 pb-16 flex">
+							<div class="stat-card-left flex flex-col justify-center">
+								<h1 class="f-64 text-white">{{ card_number }}</h1>
+			
+								<p class="heading-color-alt letter-space text-sm">{{ card_heading }}</p>
+							</div>
+							
+							<div class="vertical-line"></div>
+			
+							<p class="card-paragraph text-sm"> {{ card_paragraph }}</p>
+			
+						</div>
+			
+					{{ /collection:stat_cards }}	
+	
+				</div>
+	
+				<a href="{{ intro_link }}" class="animated-link flex items-center mt-8">
+	
+					<p class="heading-color-alt flex">
+						{{ intro_section_link_text }} &nbsp;
+						<div class="arrow-right-container">
+							{{ theme:output src="svg/arrow-right.svg" }}
+						</div>
+					</p>
+					
+				</a>
+	
+			</div>
+
+		</section>
+		<!-- END intro_section -->
+
+	</div>
+
+</section>
+
+<!-- START overflow_image_section -->
+<section class="">
+
+	<div class="bg-contrast">
+
+		<div class="">
+	
+			<div class="mt-24 lg:mt-32 pb-0"><!--this is the buffer for the overflow-image--></div>
+	
+			<section class="trim overflow-section-wrapper lg:pb-0">
+	
+			  <div class="flex flex-col-reverse md:flex-row justify-center wrapper">
+			
+				<div class="medium-762 overflow-image-text frame mb-0 md:mt-0">
+	
+				  <h3 class="overflow-heading text-white">{{ overflow_heading }}</h3>
+	
+				  <p class="mt-6 text-xl overflow-paragraph">{{ overflow_paragraph }}</p>
+	
+				  <a href="{{ overflow_link }}" class="btn btn-w1 mt-10">
+
+					<svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23 8L0.499999 15.7942L0.5 0.20577L23 8Z" fill="#11213E"/>
+					</svg>
+	
+					<span class="btn__text">{{ overflow_text }}</span>
+	
+				  </a>
+	
+				</div> 
+			
+				<div class="medium-762 md:pl-16 lg:p-0 lg:gutter">
+	
+				  <div class="accent-lines">
+	
+					<img class="overflow-image-left" src="{{ overflow_image }}" alt="image">
+	
+				  </div>
+	
+				</div>
+			
+			  </div>
+	
+			</section>
+	
+		</div>
+
+	</div>
+
+</section>
+<!-- END overflow_image_section -->
+
+<!-- START custom component -->
+<section class="">
+
+	{{ collection:testimonials as="testimonials" }}
+
+		<custom-slider :items='{{ testimonials | to_json }}' />
+
+	{{ /collection:testimonials }}
+
+</section>
+<!-- END custom component -->
+
+<section class="bg-contrast relative gutter">
+
+	<div class="patterns w-full md:w-1/2">
+		<svg width="100%" style="height: 100%;">
+			<defs>
+				<pattern id="pattern" x="0" y="0" width="400px" height="400px" patternUnits="userSpaceOnUse">
+					<path fill="#11213E" d="M400,201.3v-2.5l-97.4-33.8l30.9-30.9H400v-2h-64.5l64.3-64.3h0.2v-0.2v-1.8v-1l-1,1h-65V0.7l0.7-0.7H334h-2
+		h-0.2L267,64.8V0h-2v66.8L234.9,97L201.2,0h-2.5L165,96.8l-31-31V0h-2v63.8L68.2,0H68h-2h-0.7L66,0.7v65.1H2V0H0v64.7v1v1.8v0.2V132
+		v2v64.8v2.5V266v2v63.8v0.9v1.9v0.1V398v2h2h62.7H66h1.5H68h64h2h64.7h2.5H265h2h65h0.5h1.5h1.3H400v-2h-66v-63.3h66v-0.1v-1.9v-0.9
+		L336.2,268H400v-2h-65.8l-31.1-31.1L400,201.3z M397.5,200l-96,33.3l-33.7-33.7l33.2-33.2L397.5,200z M267,331.7V268h65v64.7h-64
+		L267,331.7z M265,329.7L203.3,268H265V329.7z M132,332.7H68V268h64L132,332.7L132,332.7z M130,334.7l-62,62v-62H130z M99,166.5
+		l33,33v0.3l-33.5,33.5L2.5,200L99,166.5z M132,134v62.7L69.3,134H132z M68,132V67.7h64V132H68z M135,199.7l65-65l65,65v0.1l-65,65
+		L135,199.7z M198.5,266H134v-64.5L198.5,266z M202.2,134H265v62.8L202.2,134z M134,197.8V134h63.8L134,197.8z M132,202.7V266H68.7
+		L132,202.7z M66,332.7H2v-0.1l64-64V332.7z M134,268h62.7L134,330.7V268z M199.5,268h0.9l33,33L200,397.5l-33.5-96.5L199.5,268z
+		 M201.5,266l63.5-63.5V266H201.5z M267,197.7V134h63.7L267,197.7z M267,132V67.7h65V132H267z M397,67.7l-63,63v-63H397z M332,2.7
+		v63.1h-63.1L332,2.7z M265,132h-62.3L265,69.7V132z M199.9,2.5l33.4,96.1L200,131.8l-33.4-33.4L199.9,2.5z M197.3,132H134V68.7
+		L197.3,132z M68,2.7l63.1,63.1H68V2.7z M66,130.7l-63-63h63V130.7z M2,69.5L64.5,132H2V69.5z M2,134h64.5l30.9,30.9L2,198.1V134z
+		 M2,202l94.9,33L65.8,266H2V202z M2,268h61.8L2,329.8V268z M2,398v-63.3h64V398H2z M69.5,398l62.5-62.5V398H69.5z M134,398v-64.5
+		l30.9-30.9L198,398H134z M201.9,398l33.1-95.4l29.9,29.9V398H201.9z M267,334.7h0.2l63.3,63.3H267V334.7z M332,396.7l-62-62h62
+						 V396.7z M334,332.7v-64.1l64.1,64.1H334z M267,266v-64.3l64.3,64.3H267z"/>
+				</pattern>
+			</defs>
+	
+			<rect x="0" y="0" width="100%" height="100%" fill="url(#pattern)" />
+		</svg>
+	</div>
+ 
+	<div class="flex flex-col-reverse md:flex-row home-summary-section justify-center wrapper">
+
+		<!-- START left half -->
+		<div class="summary-left-wrapper w-full md:w-1/2">	
+
+			<div class="w-full flex md:pt-32 h-full items-center md:items-start gutter trim pl-0">
+
+				<div class="home-summary-left lg:frame mb-0 md:mt-0 flex flex-col">
+
+					<h1 class="text-white summary-heading">{{ summary_heading }}</h1>
+
+					<p class="text-xl mt-6">{{ summary_paragraph }}</p>
+
+					<a href="{{ summary_link }}" class="btn btn-w1 mt-10">
+
+						<svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M23 8L0.499999 15.7942L0.5 0.20577L23 8Z" fill="#11213E"/>
+						</svg>
+
+						<span class="btn__text">{{ summary_text }}</span>
+
+					</a>
+
+				</div>
+			</div>
+
+		</div>
+		<!-- END left half -->
+	
+		<!-- START right half -->
+		<div class="md:w-1/2 gutter flex justify-start items-start summary-right-container md:pr-0">
+			<div class="home-summary-right flex flex-col bg-contrast items-start">
+				
+				<div class="summary-images-wrapper image-resize">
+					<div class="mb-5 main-grid-img-box">
+						<img class="main-grid-image" src="{{ glide:main_grid_image }}" alt="image">
+					</div>
+					
+					<div class="inline-block bottom-image-container flex justify-between">
+
+						{{ secondary_grid_images }}
+						
+						<div class="bottom-image-wrapper">
+
+							<img class="bottom-image" src="{{ glide:url }}" alt="image">
+
+						</div>
+
+						{{ /secondary_grid_images }}
+
+					</div>
+
+				</div>
+
+				<p class="heading-color-alt font-semibold mt-10">{{ image_grid_label }}</p>
+			</div>
+		</div>
+		<!-- END right half -->
+
+
+	</div>
+
+</section>			
+<!-- END summary_section -->
+
+<section class="trim gutter">
+
+	<div class="wrapper">
+		
+		<!-- START articles_section -->
+		<section class="flex flex-col lg:flex-row">
+
+			<div class="article-left w-full lg:w-1/5 flex">
+	
+				<p class="heading-color-alt font-semibold">{{ article_section_heading }}</p>
+	
+			</div>
+
+			<div class="article-right lg:w-4/5 xl:w-4/5 lg:pr-20">
+
+				<div class="flex flex-1 flex-wrap justify-between article-card-container">
+	
+					{{ collection:blog featured_article:is="true"}}
+							<a href="{{ url }}" class="article-card bg-contrast pt-8 pb-16 display-four">
+			
+								<h5 class="text-white">{{ title }}</h5>
+				
+								<p class="mt-4"> {{ post_description }}</p>
+				
+							</a>
+					{{ /collection:blog}}	
+	
+				</div>
+
+				<a href="{{ articles_link }}" class="btn articles-btn mt-10">
+					
+					<svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23 8L0.499999 15.7942L0.5 0.20577L23 8Z" fill="#11213E"/>
+					</svg>
+						
+					<span class="btn__text">{{ articles_text }}</span>
+				</a>
+				
+			</div>	
+
+		</section>
+		<!-- END articles_section -->
+		
+	</div>
+
+</section>

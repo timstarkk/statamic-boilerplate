@@ -1,0 +1,69 @@
+title: Testimonials
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: image
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          display: Image
+          type: assets
+          icon: assets
+          listable: hidden
+          container: images
+          max_files: 1
+          validate:
+            - required
+      -
+        handle: name
+        field:
+          input_type: text
+          antlers: false
+          display: Name
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: company
+        field:
+          input_type: text
+          antlers: false
+          display: Company
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: comments
+        field:
+          antlers: false
+          display: Comments
+          type: textarea
+          icon: textarea
+          listable: hidden
+          validate:
+            - required
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
