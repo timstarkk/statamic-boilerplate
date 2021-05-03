@@ -1,10 +1,11 @@
-<section id="banner" class="banner {{ if banner_image }}has-image{{ /if }} {{ banner_height }} gutter">
+<!-- <section id="banner" class="banner {{ if banner_image }}has-image{{ /if }} {{ banner_height }} gutter"> -->
 	
-	{{ if banner_image }}
+	<!-- {{ if banner_image }}
 	<div class="banner__image banner-{{ banner_overlay }}"style="background-image: url('{{ banner_image }}');"></div>
 	{{ /if }}
 
 	<div class="banner__inner wrapper banner-inner">
+		
 		{{ if banner_subheading }}
 		<div id="banner-heading-group" class="hgroup">
 			<div class="">
@@ -17,16 +18,36 @@
 		{{ else }}
 		<h1>{{ banner_heading or title }}</h1>
 		{{ /if }}
+
 		{{ if banner_intro }}
 		<div class="markdown mar-t">
 			{{ banner_intro }}
 		</div>
 		{{ /if }}
+
 		{{ if banner_button }}
 		<a class="btn mar-t" href="{{ banner_button_link }}">{{ banner_button_text }}</a>
 		{{ /if }}
 
 		<div class="pseudo-line"></div>
-	</div> <!-- END banner__inner -->
+	</div>  -->
+
+	<!-- END banner__inner -->
 	
-</section> <!-- END banner -->
+<!-- </section>  -->
+<!-- END banner -->
+
+<section>
+	<banner 
+		:image="`{{ banner_image }}`" 
+		:overlay="`{{ banner_overlay}}`" 
+		:height="`{{ banner_height }}`"
+		:heading="`{{ banner_heading }}`"
+		:subheading="`{{ banner_subheading }}`"
+		:title="`{{ title }}`"
+		:intro="`{{ banner_intro }}`"
+		:button="`{{ banner_button }}`"
+		:buttonLink="`{{ banner_button_link }}`"
+		:buttonText="`{{ banner_button_text }}`"
+	/> 
+</section>

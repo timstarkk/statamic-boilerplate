@@ -15,14 +15,14 @@
     line-height: 1.2;
   }
 
-  #banner-heading-group {
-    opacity: 0;
-    transition: opacity 1600ms cubic-bezier(.29,.4,.15,.91) 100ms;
+  // #banner-heading-group {
+  //   opacity: 0;
+  //   transition: opacity 1600ms cubic-bezier(.29,.4,.15,.91) 100ms;
 
-    &.site-loaded {
-      opacity: 1;
-    }
-  }
+  //   &.site-loaded {
+  //     opacity: 1;
+  //   }
+  // }
 
   .banner-subheading {
     line-height: 1.4;

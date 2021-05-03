@@ -4,9 +4,9 @@ blueprint: home
 template: pages/home
 banner_overlay: overlay
 banner_height: banner
-updated_by: 970fb6b4-712d-4017-8cad-9b13f8caba15
-updated_at: 1619712094
-banner_image: banners/updated_home_hero.jpg
+updated_by: 79bd1ec9-410f-4549-b14e-33d7a7a0e2e3
+updated_at: 1619909241
+banner_image: banners/hero-1-plain.jpeg
 banner_heading: 'Growth Specialists'
 heading: 'Hello from Heading'
 background_color: bg-light
@@ -26,10 +26,6 @@ summary_image_grid:
 image_grid_label: 'People are our passion'
 text: 'Learn More'
 link: '#'
-main_grid_image: watch-hand-1.jpg
-secondary_grid_images:
-  - woman-sq-500.jpg
-  - father-kids-1000.jpg
 article_section_heading: 'Articles of interest'
 summary_text: 'Learn More'
 summary_link: '#summary'
@@ -39,7 +35,6 @@ articles_text: 'More Articles'
 articles_link: blog
 intro_section_link_text: 'Learn more about our process'
 banner_subheading: 'Your trusted partner for law firm expansion, mergers, and team building.'
-overflow_image: illuminated-office-600x2.jpg
 id: home
 ---
 Welcome to your new Statamic website.
